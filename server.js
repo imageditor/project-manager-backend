@@ -37,6 +37,8 @@ app.get("/", (req, res) => {
     res.json({ message: "Welcome to Iv-Alex application." });
 });
 
+require("./app/routes/project.routes")(app);
+
 // set port, listen for requests
 const PORT = process.env.PORT || 8088;
 app.listen(PORT, () => {
