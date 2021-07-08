@@ -1,4 +1,4 @@
-export default mongoose => {
+module.exports = mongoose => {
 
     let schema = mongoose.Schema(
         {

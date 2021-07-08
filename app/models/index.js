@@ -1,11 +1,11 @@
-import { url } from "../config/db.config.js";
+const dbConfig = require("../config/db.config.js");
 
-import mongoose, { Promise } from "mongoose";
-Promise = global.Promise;
+const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
 
 const db = {};
 db.mongoose = mongoose;
-db.url = url;
-db.tutorials = require("./tutorial.model.js")(mongoose);
+db.url = dbConfig.url;
+db.projects = require("./project.model.js")(mongoose);
 
-export default db;
+module.exports = db;
