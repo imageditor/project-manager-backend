@@ -12,8 +12,7 @@ exports.create = (req, res) => {
     // Create a Project
     const project = new Project({
         title: req.body.title,
-        description: req.body.description,
-        published: req.body.published ? req.body.published : false
+        description: req.body.description
     });
 
     // Save Project in the database
