@@ -3,12 +3,7 @@ module.exports = mongoose => {
     let schema = mongoose.Schema(
         {
             title: String,
-            description: String,
-            img:
-            {
-                data: Buffer,
-                contentType: String
-            }
+            description: String
         },
         { timestamps: true }
     );

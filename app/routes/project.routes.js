@@ -18,7 +18,7 @@ module.exports = app => {
     // Delete a Project with id
     router.delete("/:id", projects.delete);
 
-    // Create a new Project
+    // Delete all Projects
     router.delete("/", projects.deleteAll);
 
     app.use('/api/projects', router);
